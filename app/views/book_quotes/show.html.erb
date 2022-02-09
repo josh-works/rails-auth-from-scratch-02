@@ -1,0 +1,16 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Quote:</strong>
+  <%= @book_quote.quote %>
+</p>
+
+<p>
+  <strong>Book title:</strong>
+  <%= @book_quote.book_title %>
+</p>
+
+
+
+<%= link_to 'Edit', edit_book_quote_path(@book_quote) %> |
+<%= link_to 'Back', book_quotes_path %>

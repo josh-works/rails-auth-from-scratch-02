@@ -1,0 +1,10 @@
+<%= @regular_user.nickname %>
+<% @regular_user.book_quotes.each do |q| %>
+  <ul>
+    
+    <li><%= q.quote %></li>
+    <li><%= q.book_title %></li>
+    <%= link_to "see quote", book_quote_path(q) %>
+    
+  </ul>
+<% end %>

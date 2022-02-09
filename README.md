@@ -51,3 +51,16 @@ b rails db:create
 b rails db:migrate
 b rails db:seed
 ```
+
+## Step 2: Add Confirmation and Password Columns to Users Table
+
+instead of `StaticPage#home`, I'm going to create a BookQuotes table, populate it, and make the route/home page be the `book_quotes#index`:
+
+```
+> b rails g scaffold BookQuote quote:string book_title:string regular_user:references
+```
+
+hm, messed up the scaffold, shouldn't have used  `regular_user:references` the way that I did. 
+
+I'll tear this all down, roll back the migration(s), and try a second time. 
+
